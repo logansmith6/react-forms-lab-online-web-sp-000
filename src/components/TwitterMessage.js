@@ -7,7 +7,7 @@ class TwitterMessage extends React.Component {
     submittedData: [],
     maxChars: 280
   }
-  
+
   handleMessageChange = (event) => {
     this.setState({
       message: event.target.value
@@ -17,16 +17,16 @@ class TwitterMessage extends React.Component {
       maxChars: previousState.maxChars - 1
       }
     })
-   
+
   }
 
   handleSubmit = event => {
-    
+
     let formData = { message: this.state.message }
     let dataArray = this.state.submittedData.concat(formData)
     this.setState({submittedData: dataArray})
   }
- 
+
 
   render() {
     return (
